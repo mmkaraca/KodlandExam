@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Exam Website</h1>
+            {% if user %}
+                <div class="highest-score">
+                    En Yüksek Skor: {{ user.highest_score }}
+                </div>
+            {% endif %}
+        </div>
+    </header>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    <footer>
+        <p>Geliştirici: Mustafa Murat Karaca</p>
+    </footer>
+</body>
+</html>

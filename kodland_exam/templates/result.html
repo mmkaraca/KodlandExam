@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Sonuç</h2>
+<p>Skorunuz: {{ score }}</p>
+<p>En Yüksek Skor: {{ highest_score }}</p>
+<a href="{{ url_for('exam') }}">Tekrar Dene</a>
+{% endblock %}
